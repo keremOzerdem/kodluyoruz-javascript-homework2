@@ -83,7 +83,13 @@ function newElement() {
 //Allows the li element to be selected on click
 function checkTask() {
     var taskList = document.querySelector("#list")//Choosed task's DOM is assigned a structure
-
+    //It listens to the click event of the request, 
+    //in the if part it checks whether the event target
+    // is li, it says if he clicked on the li element,
+    // and if he clicked on the li element, 
+    //it gives or deletes the class (1st click adds class,
+    // 2nd click deletes class, 3rd click) also adds class,
+    // 4th click deletes class....)
     taskList.addEventListener("click", (checkMark) => {
         if (checkMark.target.tagName === "LI") {
             checkMark.target.classList.toggle("checked")
